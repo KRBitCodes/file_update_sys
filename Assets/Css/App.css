@@ -1,0 +1,94 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.documents-container {
+    width: 100%;
+    height: auto;
+    background-color: aliceblue;
+}
+.documents-container .documents-header {
+    width: 100%;
+    height: auto;
+}
+.documents-container .documents-header h2 {
+    color: #ff0000;
+    text-align: center;
+    font-family: Impact;
+    letter-spacing: 4px;
+    margin-bottom: 2em;
+}
+.documents-container .documents {
+    width:100%;
+    height:auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.document-card {
+    width: 30%;
+    height: auto;
+    background-color: #9eebe4;
+    padding: 10px;
+    border: 2px groove #350c81;
+    margin-top: 1em;
+}
+.document-card:hover {
+    background-color: #e9997e;
+    border: 3px dashed #faf0ff;
+    border-radius: 6px;
+
+}
+.document-icon {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.document-card img {
+    width: 100px;
+    height: 100px;
+    resize: none;
+}
+.document-info {
+    width: 100%;
+    height: auto;
+}
+.document-info p {
+    font-family: Cambria;
+    text-align: center;
+}
+.card-buttons {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 2em;
+}
+.card-buttons button {
+    width: 30%;
+    height: 40px;
+    border: none;
+    cursor: pointer;
+    background-color: #67d0e8;
+    border-radius: 6px;
+}
+.card-buttons button:first-child {
+    background-color: #2244ff;
+}
+.card-buttons button:nth-child(2) {
+    background-color: #ff4500;
+}
+.card-buttons button:last-child {
+    background-color: greenyellow;
+}
+.card-buttons button a {
+    text-decoration: none;
+    color: black;
+    font-family: Arial;
+}
+.card-buttons button:hover {
+    opacity: 0.5;
+}

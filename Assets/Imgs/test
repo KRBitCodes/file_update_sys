@@ -1,0 +1,12 @@
+<?php
+class AdminCM extends DatabaseConfig {
+    protected function appendAdmin($fullName, $Email, $Password, $adminStatus) {
+        $stashStmt = $this->integrate()->prepare('INSERT INTO `admin` (`userName`, `userEmail`, `userPassword`, `userStatus`) VALUES (?, ?, ?, ?);');
+        $hashedPwd = password_hash($Password, PASSWORD_DEFAULT);
+        if (!$stashStmt->execute([$fullName, $Email, $hashedPwd, $adminStatus])) {
+            header("Location: ./../../Auth/Register.php?msg=server_error");
+            exit();
+        }
+        $stashStmt = null;
+   }
+}
